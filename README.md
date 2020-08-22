@@ -17,14 +17,14 @@ componet의 기능을 명세하고 componet간 연결 하기 위한 interface이
    application core에서 outbound prot를 이용하여 외부(secondary adapter의)기능을 호출하게 된다. 이렇게 outbound interface를 이용하여 호출하게 되면 application core 외부(secondary adapter의)의 구현방법과는 관계가 필요없어진다.( ex) rdb데이터를 사용하다 검색엔진데이터 사용으로 변경을 해도 영향을 받지 않는다.)   
 
 ### adapter
-interface를 다른 interface로 변경하는 역할을 한다. primary Adapter와 secondary Adapter 어뎁터가 있다.
+interface를 다른 interface로 변경하는 역할을 한다. primary와 secondary adapter가 있다.
 
-- #### primary adapter의(driving Adapters)
+- #### primary adapter의(driving adapters)
    UI를 표현한다. ex) API Controller, Web Controller, View 
    application을 실행하기 때문에 driving adapter의 한다.   
    primary adapter의 inbound port를 사용하여 application core에 접근한다.
 
-- #### secondary adapter의(driven Adapters)
+- #### secondary adapter의(driven adapters)
    데이터베이스, 외부 라이브러리, 외부 API 등에 대한 연결이다.   
    secondary adapter의 outbound port를 상속받아서 구현한다.
    application core에서 outbound port를 이용하여 secondary adapter의 기능르 사용하게 된다. (데이터베이스, 외부 라이브러리, 외부 API를 호출하게 된다.)
