@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class RegisterBookController {
+public class RegisterBookController {
 
     private final RegisterBookUseCase registerBookUseCase;
 
@@ -17,7 +17,7 @@ class RegisterBookController {
     }
 
     @PostMapping(path = "/books/register")
-    void registerBook(@RequestBody Book book) {
+    public void registerBook(@RequestBody Book book) {
         RegisterBookCommand command = new RegisterBookCommand(book.getTitle(), book.getAuthorId());
         registerBookUseCase.registerBook(command);
     }
