@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.Optional;
 
 public interface BookRepository extends CrudRepository<Book, Long> {
+
     @Query("select b.* from Book b where b.title = :title")
     Optional<Book> findByTitle(@Param("title") String title);
 
