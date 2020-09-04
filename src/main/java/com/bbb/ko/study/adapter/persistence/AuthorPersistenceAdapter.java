@@ -19,4 +19,5 @@ public class AuthorPersistenceAdapter implements FindAuthorByIdPort {
         return authorRepository.findById(authorId)
                 .orElseThrow(() -> new FindBookByTitlePort.AuthorNotFoundException(authorId));
     }
+
 }
