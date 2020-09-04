@@ -129,6 +129,7 @@ Clean Architecture with Spring by Tom Hombergs @ Spring I/O 2019
 Hexagonal Architecture, DDD, and Spring      
 <https://www.baeldung.com/hexagonal-architecture-ddd-spring>   
 
+
 Blog   
 <https://www.thinktocode.com/2018/07/19/ports-and-adapters-architecture/>   
 <https://blog.coderifleman.com/2017/12/18/the-clean-architecture/>   
